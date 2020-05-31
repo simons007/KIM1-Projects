@@ -34,6 +34,7 @@ namespace KimClockManager
 
             dataBuffer = new List<char>();
 
+            Console.WriteLine("opening port: " + args[0]);
             sPort = new SerialPort(args[0], 1200, Parity.None, 8, StopBits.Two);
             sPort.Handshake = Handshake.None;
             sPort.Open();
